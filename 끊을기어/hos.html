@@ -1,0 +1,397 @@
+<!DOCTYPE html by CGS>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stop Smoke!</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+        <script src="jquery.mobile-1.4.5/demos/js/jquery.js"></script>
+        <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        
+        
+         <!-- 테이블-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+        <!--<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+        
+        <style type="text/css">
+            #logo
+            {
+                width:200px;
+                height:111px;
+                text-indent:-99999px;
+                background-image: url(img/s_gear_logo.png);
+                background-repeat: no-repeat;
+                margin-top: 0px; /* 상단 여백 없이 */
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;
+            }
+            
+            .white
+            {
+                background-color: white;   
+            }
+            
+            .box_style
+            {
+                float:left;
+                width:220px;
+                margin:0.5em;
+                padding: 1em;
+            }
+            
+            .float_style
+            {
+                float: left;
+            }
+            
+            .clear_style
+            {
+                clear: left;
+            }
+            
+            .green
+            {
+                background-color: #2FED28;
+            }
+            
+            .orange
+            {
+                background-color: #FF8224;
+            }
+            
+            .red
+            {
+                background-color: #FF0000;
+            }
+            
+            #size
+            {
+                height: 50px;   
+            }
+            
+            #container #foot
+            {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+            }
+            
+            #container
+            {
+                padding-bottom: 50px;
+                min-height: 100%; 
+                position: relative;
+            }
+            
+/* 테이블*/
+            
+            th {
+                border-bottom: 2px solid #d6d6d6;
+                }
+
+            tr:nth-child(even) {
+                background: #e9e9e9;
+                }
+            
+            .font_black
+            {
+             color: black;   
+            }
+            .cate_size
+            {
+                
+               font-size:20;
+            }
+
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        <div data-role="page" data-theme="b" id="container">
+            
+                <div data-role="header" data-theme="b" style="width:100%; height:111px">
+                    <a href="main.html" data-icon="back" data-iconpos="notext" rel="external">뒤로</a>
+                    <a href="main.html" data-icon="home" data-iconpos="notext" rel="external">홈</a>
+                    <h1 id="logo">끊을기어?</h1>
+                </div>
+            <p></p>
+        
+<!--        테이블-->
+        
+<center>
+    <h1>전국 보건소 정보</h1>
+</center>
+  
+  <div data-role="main" class="ui-content">
+    <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable">
+      <thead>
+        <tr>
+          <th data-priority="1" class="cate_size">서울</th>
+          <th data-priority="2" class="cate_size">경기</th>
+          <th data-priority="3" class="cate_size">강원</th>
+          <th data-priority="4" class="cate_size">인천</th>
+          <th data-priority="5" class="cate_size">대전</th>
+          <th data-priority="6" class="cate_size">대구</th>
+          <th data-priority="7" class="cate_size">부산</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+              강남구 보건소</br>
+          강남구 선릉로 668 강남구청</br>  
+          02-3423-7200</br>
+         <a href="http://health.gangnam.go.kr/">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%EA%B0%95%EB%82%A8%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.4278292,124.8216156,8z/data=!4m2!3m1!1s0x357ca46de787c49f:0xb64e579b00ad5c95">지도보기</a>
+        
+         </td>
+        
+          <td> 분당구 보건소</br>
+          경기도 성남시 분당구 야탑1동 349</br>  
+          031-729-3990</br>
+         <a href="http://bundanghealth.or.kr">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%EB%B6%84%EB%8B%B9%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.4110332,127.1224653,17z/data=!3m1!4b1!4m2!3m1!1s0x357ca7e00cf2540f:0xc32d1a3cb6a0cee">지도보기</a>
+        </td>
+          <td> 춘천시 보건소</br>
+          강원도 춘천시 중앙로 135(중앙로3가)</br>  
+          033-250-3550</br>
+         <a href="http://www.chuncheon.go.kr/index.chuncheon?menuCd=DOM_000000539000000000">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%EC%B6%98%EC%B2%9C%EC%8B%9C%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.8755425,127.718005,17z/data=!3m1!4b1!4m2!3m1!1s0x3562e6792f6074cd:0x9ec8d77fa818fec1">지도보기</a>
+        </td>
+
+          <td> 부평구 보건소</br>
+          인천광역시 부평구 부평동 442-1</br>  
+          032-509-8200</br>
+         <a href="http://www.icbp.go.kr/open_content/clinic/">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%EB%B6%80%ED%8F%89%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.4981253,126.7238467,17z/data=!4m2!3m1!1s0x357b7c4c5f6e5dfd:0xbe184324d7bfa34a">지도보기</a>
+        </td>
+
+          <td> 동구 보건소</br>
+          대전광역시 동구 동구청로 147(가오동)</br>  
+          042-251-6121</br>
+         <a href="http://health.donggu.go.kr/">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%EB%8C%80%EC%A0%84%EC%8B%9C%EB%8F%99%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@36.3428834,127.350431,12z/data=!4m5!1m2!2m1!1z64yA7KCE6rSR7Jet7IucIOuPmeq1rCDso7zrs4Ag67O06rG07IaM!3m1!1s0x3565491c0c988265:0x87076208734ce2d3">지도보기</a>
+        </td>
+
+          <td> 북구 보건소</br>
+          대구광역시 북구 성북로 49(침산동)</br>  
+          053-665-3211</br>
+         <a href="http://health.buk.daegu.kr/main/main.html">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%EB%8C%80%EA%B5%AC%EB%B6%81%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.8917943,128.5888897,17z/data=!3m1!4b1!4m2!3m1!1s0x3565e15d6ad90c35:0x2dfc30501f2c881">지도보기</a>
+        </td>
+
+          <td> 해운대구 보건소</br>
+          부산광역시 해운대구 양운로 37번길 59(좌동)</br>  
+          051-746-4000</br>
+         <a href="http://health.haeundae.go.kr/">홈페이지</a>&nbsp;
+        <a href="https://www.google.co.kr/maps/place/%ED%95%B4%EC%9A%B4%EB%8C%80%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.1641139,129.1764714,17z/data=!4m5!1m2!2m1!1z7ZW07Jq064yA6rWs67O06rG07IaM!3m1!1s0x35688d1269fc92eb:0xecb6ff727d95dcd1">지도보기</a>
+        </td>
+<!--/***********************************************          1~2             ********************************************************/-->
+        </tr>
+        <tr>
+          <td class="font_black">
+              용산구 보건소</br>
+            서울특별시 용산구 이태원동 34-87</br>
+            02-2199-8012</br>
+              <a href="http://health.yongsan.go.kr/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%9A%A9%EC%82%B0%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.5325114,126.9879473,17z/data=!4m5!1m2!2m1!1z7Jqp7IKw6rWs67O06rG07IaM!3m1!1s0x357ca21203dd01b9:0x5f9dea830c849aef">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              수원시 보건소</br>
+            수원시 팔달구 팔달산로 6 (교동)</br>
+            031-228-7716</br>
+              <a href="https://www.google.co.kr/maps/place/%ED%8C%94%EB%8B%AC%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.271503,126.9774018,13z/data=!4m5!1m2!2m1!1z7IiY7JuQ7Iuc67O06rG07IaM!3m1!1s0x357b433c0f63fa4b:0xd29a30a7ac2ac809">홈페이지</a>&nbsp;
+             <a href="http://naver.com">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              원주시 보건소</br>
+            강원도 원주시 원일로 139 (일산동)</br>
+            033-737-4011</br>
+              <a href="http://www.wonju.go.kr/site/dep/05_health/page/index.jsp">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%9B%90%EC%A3%BC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.3515232,127.9445818,17z/data=!4m5!1m2!2m1!1z7JuQ7KO87Iuc67O06rG07IaM!3m1!1s0x3563750f58c10e11:0x1c5505d20235e3ed">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              연수구 보건소</br>
+            인천광역시 연수구 함박외로 13</br>
+            032-749-8000</br>
+              <a href="http://www.yeonsu.go.kr/clinic/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%97%B0%EC%88%98%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.4190104,126.6688826,17z/data=!4m5!1m2!2m1!1z7Jew7IiY6rWsIOuztOqxtOyGjA!3m1!1s0x357b79c325e714ab:0x40c962ad288d66cb">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              서구 보건소</br>
+            대전광역시 서구 만년로 74(만년동)</br>
+            042-611-5300</br>
+              <a href="http://www.seogu.go.kr/health/main.do">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@36.368584,127.379812,17z/data=!3m1!4b1!4m2!3m1!1s0x35654bd4fe9f202f:0xcd19ff8d19fcd212">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              수성구 보건소</br>
+            대구광역시 수성구 수성로 213(중동)</br>
+            053-666-3111</br>
+              <a href="http://www.suseong.kr/health/main/main.htm">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%88%98%EC%84%B1%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.8446059,128.6100612,17z/data=!4m5!1m2!2m1!1z7IiY7ISx6rWs67O06rG07IaM!3m1!1s0x3565e252df885863:0x33c0d81e3aa8ef0e">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              부산진구 보건소</br>
+            부산광역시 부산진구 황령대로8번길 36(범천동)</br>
+            051-645-4000 </br>
+              <a href="http://health.busanjin.go.kr/index.busanjin">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.14628,129.0577883,17z/data=!4m5!1m2!2m1!1z67aA7IKwIOynhOq1rOuztOqxtOyGjA!3m1!1s0x3568eb77edfa688d:0xe49c95b51764b4a4">지도보기</a>
+            </td>
+
+        </tr>
+
+<!--/***********************************************          2~3             ********************************************************/-->
+
+        <tr>
+          <td>
+              서초구 보건소</br>
+              서울특별시 서초구 남부순환로 2584 서초구청</br>
+              02-2155-8114</br>
+            <a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%B4%88%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.4836015,127.03125,17z/data=!4m5!1m2!2m1!1z7ISc7LSI6rWs67O06rG07IaM!3m1!1s0x357ca149baa7d847:0xeecdd4b2a839ec30">지도보기</a>
+            </td>
+
+          <td>
+              수지구 보건소</br>
+              경기도 용인시 수지구 포은대로 435 (풍덕천동)</br>
+              031-324-8901</br>
+              <a href="http://health.sujigu.go.kr/main/main.asp">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%88%98%EC%A7%80%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.3223401,127.0964762,17z/data=!4m5!1m2!2m1!1z7IiY7KeA6rWs67O06rG07IaM!3m1!1s0x357b5a2509b4864b:0xa1131cc831723525">지도보기</a>
+            </td>
+
+          <td>
+              강릉시 보건소</br>
+              강원도 강릉시 남부로17번길 38(내곡동)</br>
+              033-660-3011</br>
+              <a href="http://gnhc.gn.go.kr/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EA%B0%95%EB%A6%89%EC%8B%9C%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.742799,128.812686,12z/data=!4m5!1m2!2m1!1z6rCV66aJ67O06rG07IaM!3m1!1s0x3561ef682f89c2bb:0x562e590eb49695ba">지도보기</a>
+            </td>
+
+          <td>
+              계양구 보건소</br>
+              인천광역시 계양구 계산새로 88(계산동)</br>
+              032-430-7801</br>
+              <a href="http://www.gyeyang.go.kr/clinic/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EA%B3%84%EC%96%91%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.5374507,126.7353607,17z/data=!4m5!1m2!2m1!1z6rOE7JaR6rWs67O06rG07IaM!3m1!1s0x357c827e12a78c79:0x49e1df55613df58c">지도보기</a>
+            </td>
+
+          <td>
+              중구 보건소</br>
+              대전광역시 중구 산성로 63 (문화동)</br>
+              042-580-2700 </br>
+              <a href="http://health.djjunggu.go.kr/html/health/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EB%8C%80%EC%A0%84%EC%A4%91%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@36.3080283,127.3951029,17z/data=!3m1!4b1!4m2!3m1!1s0x35654e97c6cecee7:0x431f92d4d641b48a">지도보기</a>
+            </td>
+
+          <td>
+              달서구 보건소</br>
+              대구광역시 달서구 학산로 45 (월성동)</br>
+              053-667-5611 </br>
+              <a href="http://www.dalseo.daegu.kr/healthcenter/pages/main/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EB%8B%AC%EC%84%9C%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.8425766,128.516523,14z/data=!4m5!1m2!2m1!1z64us7ISc6rWs67O06rG07IaM!3m1!1s0x3565fb2c9fe77657:0x86d308a619de3aaa">지도보기</a>
+            </td>
+
+          <td>
+              금정구 보건소</br>
+              부산광역시 금정구 중앙대로 1777(부곡동)</br>
+               051-519-5051 </br>
+              <a href="http://health.geumjeong.go.kr/index.geumj">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EA%B8%88%EC%A0%95%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.2420475,129.0902829,17z/data=!4m5!1m2!2m1!1z6riI7KCV6rWs67O06rG07IaM!3m1!1s0x356893de2f929a15:0xa90780fe03a5c128">지도보기</a>
+            </td>
+
+        </tr>
+
+<!--/***********************************************          3~4             ********************************************************/-->
+
+        <tr>
+          <td class="font_black">
+              성북구 보건소</br>
+             서울특별시 성북구 하월곡동 46-1</br>
+              02-920-1971</br>
+              <a href="https://bogunso.seongbuk.go.kr/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%84%B1%EB%B6%81%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.6026426,127.0373294,17z/data=!4m5!1m2!2m1!1z7ISx67aB6rWs67O06rG07IaM!3m1!1s0x357cbc8272500c8f:0xfddbbbc63978bf63">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              동안구 보건소</br>
+             경기도 안양시 동안구 평촌대로253번길 41(비산동)</br>
+              031-8045-4472</br>
+              <a href="http://health.anyang.go.kr/health/main.do">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%95%88%EC%96%91%EC%8B%9C%EB%B3%B4%EA%B1%B4%EC%86%8C+%EB%8F%99%EC%95%88%EB%B3%B4%EA%B1%B4%EA%B3%BC/@37.3930675,126.9345171,14z/data=!4m5!1m2!2m1!1z6rK96riw64-EIOyViOyWkeyLnCDrj5nslYjqtawg67mE7IKw64-ZIOuztOqxtOyGjA!3m1!1s0x357b60a7af785f5b:0xf2c948154c5d862c">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              홍천군 보건소</br>
+             강원도 홍천군 홍천읍 신장대로 5</br>
+              033-434-4000</br>
+              <a href="http://www.hongcheon.gangwon.kr/health/index.do">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%ED%99%8D%EC%B2%9C%EA%B5%B0%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.6901473,127.8746619,17z/data=!4m5!1m2!2m1!1z7ZmN7LKcIOuztOqxtOyGjA!3m1!1s0x35630213c42fa2b1:0xb7a6060ef16f1efb">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              남동구 보건소</br>
+             인천광역시 남동구 소래로 633(만수동)</br>
+              032-464-4001</br>
+              <a href="http://www.namdong.go.kr/clinic/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EB%82%A8%EB%8F%99%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@37.4478227,126.728225,17z/data=!4m5!1m2!2m1!1z64Ko64-Z6rWsIOuztOqxtOyGjA!3m1!1s0x357b7b9986adbae5:0xe26af6d9b73ab41">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              유성구 보건소</br>
+             대전광역시 유성구 대학로 211 (어은동)</br>
+              042-611-2114</br>
+              <a href="http://www.yuseong.go.kr/?page_id=10469">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%9C%A0%EC%84%B1%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@36.358105,127.335441,17z/data=!3m1!4b1!4m2!3m1!1s0x35654b79efa46d51:0x8d3a5546e17b0f3b">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              동구 보건소</br>
+             대구광역시 동구 동촌로 79(검사동)</br>
+              053-662-3201</br>
+              <a href="http://www.dong.daegu.kr/health/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EB%8C%80%EA%B5%AC%EC%8B%9C%EB%8F%99%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.8881015,128.6512172,17z/data=!3m1!4b1!4m2!3m1!1s0x3565e1d788f2997b:0x986d202aeda3c528">지도보기</a>
+            </td>
+
+          <td class="font_black">
+              사하구 보건소</br>
+             부산광역시 사하구 하신번영로 127번길 2(신평동)</br>
+              051-220-5701</br>
+              <a href="http://health.saha.go.kr/">홈페이지</a>&nbsp;
+             <a href="https://www.google.co.kr/maps/place/%EC%82%AC%ED%95%98%EA%B5%AC%EB%B3%B4%EA%B1%B4%EC%86%8C/@35.0943125,128.9594325,17z/data=!3m1!4b1!4m2!3m1!1s0x3568c2e9258599a9:0xeace62109db1f390">지도보기</a>
+            </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+        
+             </div>
+            
+        
+        
+        
+            
+            <div data-role="footer" id="foot">
+                <center><p>Copyright&copy;2015 By 개발의민족 ALLRIGHT DESERVED.</p></center>
+            </div>
+            
+        
+    </body>
+</html>

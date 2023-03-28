@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+window.onload=function()
+{
+   var a= 10;
+   
+   if(a >= 0 && a<= 7)
+   {
+      document.getElementsByName('color')[0].className = "green";   
+   }
+   else if(a>7 && a<15)
+   {
+      document.getElementsByName('color')[0].className = "orange";
+   }
+   else if(a>14)
+   {
+      document.getElementsByName('color')[0].className = "red";
+   }
+   
+   document.getElementsByName('color')[0].class = a;
+
+}
+</script>
+
+<style type="text/css">
+   .green
+    {
+         background-color: #2FED28;
+    }
+            
+   .orange
+    {
+         background-color: #FF8224;
+    }
+            
+    .red
+     {
+         background-color: #FF0000;
+    }
+</style>
+
+</head>
+<body>
+                        <div width="300" height="300" name="color" class="" style="text-align:center">
+                            <p align="center">
+                                <img src="img/person.png" width="300" height="300">
+                            </p>
+                        </div>
+</body>
+</html>

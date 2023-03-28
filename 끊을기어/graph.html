@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+            window.onload=function(){
+                var canvas = document.getElementById("chartcanvas");
+                var context = canvas.getContext("2d");
+                var sw = canvas.width;
+                var sh = canvas.height;
+                var a = 5;
+                var b = 10;
+                var c = 15;
+                var d = 20;
+                var e = 15;
+                var f = 10;
+                
+                
+                var count = [f*8.05, e*8.05, d*8.05, c*8.05, b*8.05, a*8.05];
+                var barwidth=20; // 바 크기
+                var barheight;
+                var x=40; // 바 시작점
+                var base=25;
+                
+                for(var i=0; i<count.length; i++){
+                 barheight=count[i];
+                 DrawBarchart(context, "black", x, (sh-barheight)-base, barwidth, barheight);
+                 x += barwidth+8;
+                }
+                
+                function DrawBarchart(context, fillstyleColor, x, y, width, height){
+                 context.fillStyle = fillstyleColor;
+                 context.fillRect(x, y, width, height);
+                }
+            //타이틀 나타내기, 그림자효과
+            var strMessage="";
+                context.textAlign = "center";
+                context.fillStyle = "black";
+                context.shadowColor = "rgba(0,0,0,0.5)";
+                context.font = "14pt Century Gothic";
+                context.fillText(strMessage, sw/2, 25);
+        
+                
+            //x,y 좌표 라인 표시    
+            var LINE_PADDING = 35;
+                context.moveTo(LINE_PADDING*0.8, LINE_PADDING);
+                context.lineTo(LINE_PADDING*0.8, sh-LINE_PADDING*0.71);
+                context.lineTo(sw-LINE_PADDING*5, sh-LINE_PADDING*0.71);
+                
+            var size=40; //y좌표 단위표시
+                context.font = "10pt Century Gothic";
+                for(var i=0; i<5; i++){
+                    context.moveTo(LINE_PADDING*0.8, LINE_PADDING+i*size);
+                    if(i==0){
+                        context.lineTo(LINE_PADDING*0.5, LINE_PADDING+i*size);
+                        context.fillText(20-(i*5),LINE_PADDING*0.5, LINE_PADDING+i*size+12);
+                    }else if(i==1){
+                        context.lineTo(LINE_PADDING*0.5, LINE_PADDING+i*size);
+                        context.fillText(20-(i*5),LINE_PADDING*0.5, LINE_PADDING+i*size+12);
+                    }else if(i==2){
+                        context.lineTo(LINE_PADDING*0.5, LINE_PADDING+i*size);
+                        context.fillText(20-(i*5),LINE_PADDING*0.5, LINE_PADDING+i*size+12);
+                    }else if(i==3){
+                        context.lineTo(LINE_PADDING*0.5, LINE_PADDING+i*size);
+                        context.fillText(20-(i*5),LINE_PADDING*0.5, LINE_PADDING+i*size+12);
+                    }else if(i==4){
+                        context.lineTo(LINE_PADDING*0.5, LINE_PADDING+i*size);
+                        context.fillText(20-(i*5),LINE_PADDING*0.5, LINE_PADDING+i*size+12);
+                    }else if(i==5){
+                        context.lineTo(LINE_PADDING*0.5, LINE_PADDING+i*size);
+                        context.fillText(20-(i*5),LINE_PADDING*0.5, LINE_PADDING+i*size+12);
+                    }
+                }
+                context.stroke();
+                
+                //월 나타내기
+                var text_x=50;
+                var month = ["6일전", "5일전", "4일전", "3일전", "2일전", "어제"];
+                for(var i=0; i<month.length; i++){
+                    AddMonthText(context, month[i], text_x, 210);
+                    text_x += barwidth+8;
+                }
+                
+                function AddMonthText(context, strMonth, text_x, text_y){
+                        context.textAlign = "center";
+                        context.fillStyle = "black";
+                        context.font = "8pt Century Gothic";
+                        context.fillText(strMonth, text_x, text_y);
+                    }
+                //f카운트 나타내기
+                var text_x=50;
+                var count1 = [f, e, d, c, b, a];
+                for(var i=0; i<count1.length; i++){
+                    AddCount1Text(context, count1[i], text_x, 25);
+                    text_x += barwidth+8;
+                }
+                
+                function AddCount1Text(context, strCount1, text_x, text_y){
+                        context.textAlign = "center";
+                        context.fillStyle = "black";
+                        context.font = "8pt Century Gothic";
+                        context.fillText(strCount1, text_x, text_y);
+                    }
+            
+     
+            }
+        </script>
+</head>
+<body>
+<div data-role="collapsible" data-collapsed-icon="bullets" data-expanded-icon="bullets" data-theme="b">
+                    <!--<div data-role="collapsible">-->
+    <center>
+                            <canvas id="chartcanvas" class="white" width="400%" height="220%" backgorund-color="green"></canvas>
+    </center>
+                    </div>
+                    
+</body>
+</html>

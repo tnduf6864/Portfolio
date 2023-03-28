@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+    <script src="jquery.mobile-1.4.5/demos/js/jquery.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    
+    <title>Insert title here</title>
+    <!--<jsp:useBean id="write" class="graph.aa"/>-->
+
+    <!--<%
+       write.connecting();
+       int a=write.get();
+    %>-->
+
+    <script type="text/javascript">
+    window.onload=function()
+    {
+       var a= 10;
+        var a1 = a+"원";
+       document.getElementsByName('cnt')[0].value = a;
+       document.getElementsByName('price')[0].value = a1;
+       //document.cnt.value= ct;
+       //document.price.value= pr;
+    }
+
+    </script>
+
+    <style type="text/css">
+    .box_style
+    {
+                float:left;
+                width:220px;
+                margin:0.5em;
+                padding: 1em;
+    }
+    </style>
+
+</head>
+<body>
+         <div data-role="content" data-theme="b" width="100%" height="200">
+                    <div class="box_style">
+                        <label>흡연량 10/20</label>
+                        <progress name="cnt" value="" max="20"></progress>
+                    </div>
+                    <div class="box_style">
+                        <label>오늘의 흡연비용</label>
+                        <input type="text" name="price" value="" readonly>
+                    </div>
+        </div>
+</body>
+</html>

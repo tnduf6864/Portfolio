@@ -1,0 +1,203 @@
+<!DOCTYPE html by CGS>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stop Smoke!</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+        <script src="jquery.mobile-1.4.5/demos/js/jquery.js"></script>
+        <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+        
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        
+        <script type="application/javascript">
+            function date()
+            {
+                alert("금연 시작일 : 2015-11-16");   
+            }
+        </script>
+        
+        <style type="text/css">
+            #logo
+            {
+                width:200px;
+                height:111px;
+                text-indent:-99999px;
+                background-image: url(img/s_gear_logo.png);
+                background-repeat: no-repeat;
+                margin-top: 0px; /* 상단 여백 없이 */
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;
+            }
+            
+            .white
+            {   
+                background-color: white;   
+            }
+            
+            .box_style
+            {
+                float:left;
+                width:220px;
+                margin:0.5em;
+                padding: 1em;
+            }
+            
+            .float_style
+            {
+                float: left;
+            }
+            
+            .clear_style
+            {
+                clear: left;
+            }
+            
+            .green
+            {
+                background-color: #2FED28;
+            }
+            
+            .orange
+            {
+                background-color: #FF8224;
+            }
+            
+            .red
+            {
+                background-color: #FF0000;
+            }
+            
+            #size
+            {
+                height: 50px;   
+            }
+            
+            #container #foot
+            {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+            }
+            
+            #container
+            {
+                padding-bottom: 50px;
+                min-height: 100%; 
+                position: relative;
+            }
+            
+            .title_style
+            {
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+            
+            #float_style
+            {
+                float: left;   
+            }
+            
+            .input_width
+            {
+                width: 10px;   
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div data-role="page" data-theme="b" id="container">
+            
+            <a href="eng/main.html" rel="external">
+                <div data-role="header" data-theme="b" style="width:100%; height:111px">
+                    <h1 id="logo">끊을기어?</h1>
+                </div>
+            </a>    
+            <p></p>
+            
+            <div data-role="content" data-theme="b">
+                <div width="100%" height="500">
+                    <p>금연 <input type="button" onclick="date()" data-inline="true" value="5" readonly>일차 입니다.</p>
+                    
+                    <table>
+                        <tr>
+                            <td><p>금연량</p></td>
+                            <td><input type="text" data-inline="true" value="80개피" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><p>저축 금액</p></td>
+                            <td><input type="text" data-inline="true" value="18,000원" readonly></td>
+                        </tr>
+                    </table>
+                </div>
+                <div data-role="collapsible-set" data-theme="b" class="clear_style">
+                    
+                    <div data-role="collapsible" data-collapsed-icon="camera" data-theme="b">
+                        <h1>금연 포스터</h1>
+                        <div class="fotorama" data-nav="thumbs" data-theme="b">
+                            <img src="img/stop1.jpg" data-caption="<1/10>">
+                            <img src="img/stop2.jpg" data-caption="<2/10>">
+                            <img src="img/stop3.jpg" data-caption="<3/10>">
+                            <img src="img/stop4.jpg" data-caption="<4/10>">
+                            <img src="img/stop5.jpg" data-caption="<5/10>">
+                            <img src="img/stop6.jpg" data-caption="<6/10>">
+                            <img src="img/stop7.jpg" data-caption="<7/10>">
+                            <img src="img/stop8.jpg" data-caption="<8/10>">
+                            <img src="img/stop9.jpg" data-caption="<9/10>">
+                            <img src="img/stop10.jpg" data-caption="<10/10>">
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="info" data-expanded-icon="info">
+                        <h1>금연 Tip</h1>
+                        <div data-role="navbar" width="100%">
+                            <ul>
+                                <li>
+                                    <a href="effect.html" class="ui-btn-active" rel="external">
+                                        흡연의 영향
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="progress.html" rel="external">
+                                        금연 후 신체변화
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="nohow.html" rel="external">
+                                        금연 노하우
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <dl>
+                            <dt>1.흡연이 심혈관에 미치는 영향</dt>
+                            <dd>심혈관질환은 65세 이하에서는 <mark>45%</mark>가, 65세 이상에서는 <mark>25%이상</mark> 발생. 고혈압 발생률 대폭 상승</dd>
+                        </dl>
+                        <br/>
+                        <dl>
+                            <dt>2.흡연 시 발생하는 암의 종류</dt>
+                            <dd>폐암, 구강암, 인두암, 췌장, 암, 후두암, 방광암, 신장암</dd>
+                        </dl>
+                        <br/>
+                        <dl>
+                            <dt>3.산모 및 태아에 미치는 영향</dt>
+                            <dd><mark>저체중 신생아</mark>, <mark>조숙아</mark>가 태어날 가능성, <mark>임신합병증</mark> 발생률 상승</dd>
+                        </dl>
+                        <br/>
+                        <dl>
+                            <dt>4.청소년 건강에 미치는 영향</dt>
+                            <dd>16세 이하에서 흡연 시 그 피해는 20세 이후 흡연보다 피해정도가 <mark>3배</mark> 더 높으며 <abbr title="World Health Organization">조사</abbr>에 의하면, 20세 이후 흡연자의 폐암사망율은 비흡연자에 비해 <mark>9배</mark>가 높은데, 16세 이하 흡연자는 <mark>27배</mark>나 높다.</dd>
+                        </dl>
+                    </div>
+                    <a href="hos.html" rel="external"><input type="button" data-icon="plus" value="보건소 정보"></a>
+                </div>
+            </div>
+            
+            <div data-role="footer" id="foot">
+                <center><p>Copyright&copy;2015 By 개발의민족 ALLRIGHT DESERVED.</p></center>
+            </div>
+            
+        </div>
+    </body>
+</html>
