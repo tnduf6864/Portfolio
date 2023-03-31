@@ -20,3 +20,4 @@
 - 데이터베이스  - MySql
 
 # 이미지
+![1](/img/reademe/1.png)
