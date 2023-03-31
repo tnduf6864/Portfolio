@@ -20,4 +20,4 @@
 - 데이터베이스  - MySql
 
 # 이미지
-![1](Portfolio/끊을기어/img/readme/1.png)
+<img src="img/readme/1.png">
