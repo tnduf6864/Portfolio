@@ -21,4 +21,4 @@
 
 
 # 이미지
-<src image="게임플레이 - 보스.png">
+<image src="게임플레이 - 보스.png">
