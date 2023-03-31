@@ -18,3 +18,9 @@ Granger Causality의 특정 결괏값 기준으로 인과관계가 존재 가능
 https://intothedata.com/02.scholar_category/timeseries_analysis/granger_causality/
 
 # 이미지
+
+<image src=img/main.png>
+<image src=img/wordcloud.png>
+<image src=img/keywords_list.png>
+<image src=img/select_period.png>
+<image src=img/results.png>
