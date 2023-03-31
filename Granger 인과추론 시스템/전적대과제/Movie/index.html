@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <title>
+            영화제목
+        </title>
+        <style type="text/css">
+            #logo{
+                width:462px;
+                height:183px;
+                text-intent:-9999px;
+                background-image: url(title.png);
+                background-repeat: no-repeat;
+                margin-top:0px;
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;                
+            }
+            .title_style{
+                color:dimgray;
+                padding-top:10px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" style="background-color:#ffffff;padding-top:10px;">
+                <h2 id="logo"></h2>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true">
+                    <li class="menu_style">
+                        <a href="movie1.html" rel="external">
+                            <img src="pic1.png">
+                            <h3 class="title_style" >
+                                스크린샷
+                            </h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="movie2.html"  rel="external">
+                            <img src="pic2.png">
+                            <h3 class="title_style">
+                                영화소개
+                            </h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="movie3.html"  rel="external">
+                            <img src="pic3.png">
+                            <h3 class="title_style">
+                                예고편
+                            </h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="movie4.html"  rel="external">
+                        <img src="pic4.png">
+                        <h3 class="title_style">
+                            영화관 위치
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer">
+                Copyright&copy; MARVEL
+            </div>
+        </div>
+    </body>
+</html>

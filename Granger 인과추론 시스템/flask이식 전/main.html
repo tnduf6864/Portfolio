@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <title>
+	        인과추론 시스템
+        </title>      
+    </head>
+
+    <body>
+        <div data-role="page">
+            <div data-role="header" style="background-color:#grey; padding-top:10px">
+                <h2 id="a">인과추론 시스템</h2>
+            </div>
+	    <div data-role="main" class="ui-content">
+	    	<div data-role="collapsible" data-collapsed="false">
+                <h1> <center> 키워드 선택 </center></h1>
+                <ul data-role="listview" data-inset="true">
+                    <li class="menu_style">
+                        <a href="select_list.html" rel="external">
+                            <img src="list.png">
+                            <h3 class="title_style" >                                
+                                리스트에서 키워드 선택
+                            </h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="word_cloud.html"  rel="external">
+                            <img src="cloud.png">
+                            <h3 class="title_style">
+                                워드클라우드
+                            </h3>
+                        </a>
+                    </li>
+                 </ul>
+            </div>
+        <div data-role="collapsible" data-collapsed="true">
+            <h1> <center>이용 가이드 </center></h1>
+            <p/> Granger Causality란 인과관계를 추론함에 있어서 유일한 과학적 추론방법입니다.
+            <p/> Granger 인과관계가 있다고 해서 인과관계가 확실하게 있는 것은 아니지만
+            Granger 인과관계가 나오지 않는다면 인과관계가 없다고 말 할 수 있습니다.
+            <p/> 1. 문재인 대통령과 인과관계가 있는지 알고 싶은 키워드를 선택합니다.
+            리스트나 워드클라우드에서 선택할 수 있으며 리스트에 없는 키워드를 입력한다면 크롤링모듈을 호출해
+            네이버기사에서 입력한 키워드의 기사수를 크롤링해 시계열데이터를 만들게 됩니다. 이 작업은 몇 십분의 시간이 소요됩니다.
+            <p/> 2. 기간을 선택합니다. 선택한 기간이 길 수록 인과관계가 나왔을 때 더욱 신뢰성이 있으며
+            관련이 없는 기간을 포함할 시 인과관계가 나오기 힘들어집니다.
+            <p/> 3. 선택한 키워드의 시계열 데이터에서 정상성과정을 거치기 전과 후의 데이터로 문재인대통령의 지지율과 Granger Causality를 확인합니다.
+            정상성변형은 시계열데이터의 평균값을 기준으로 증가감소폭을 측정하여 시계열 데이터가 추이가 없고 고르게 만들어 인과관계비교를 하기 쉽게 만들어줍니다.            
+            <p> pvalue값이 0.05 미만일 때 Granger 인과관계가 있으며 기간을 다르게 잡을 경우 pvalue값이 달라질 수 있습니다. </p>
+        </div>
+            <div data-role="footer" 30px>
+                <h2 id="a"><center><b>Copyright © 2022  5조 댓글팀  All right reserved.</b></center></h2>
+            </div>
+        </div>
+
+        <style type="text/css">
+            #a{
+                width:462px;
+                height:30px;
+                text-intent:-9999px;
+                background-image: url(title.png);
+                background-repeat: no-repeat;
+                margin-top:0px;
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;                
+            }
+            #b{
+                   
+            }
+                
+            .title_style{
+                color:dimgray;
+                padding-top:10px;
+            }
+        
+        </style>
+
+    </body>
+</html>

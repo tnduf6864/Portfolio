@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />            
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="putName">
+        </div>	
+        <script>
+            $(window).ready($('h1').empty())
+            let getLink = window.location.search;
+            let getUserName = getLink.split('=');	//getLink를 '='를 기준으로 두 배열 요소로 분리
+            let getOnlyName = getUserName[1];	//분리한 배열 중 두번째 요소 변수에 넣기
+            let decodeName = decodeURI(getOnlyName)
+            getHtml(decodeName);
+
+            console.log(getUserName);
+            console.log(getOnlyName);
+            
+
+            function getHtml(userName){
+              let getHtml = `<h1>안녕하세요<p>${userName}</p>님!</h1>`
+              $('#putName').append(getHtml)
+            }
+        </script>
+    </body>
+</html>

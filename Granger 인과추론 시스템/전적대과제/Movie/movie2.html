@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        <title>
+            앤트맨
+        </title>
+        <style type="text/css">
+            #logo{
+                width:152px;
+                height:94px;
+                text-intent:-9999px;
+                background-image: url(title.png);
+                background-repeat: no-repeat;
+                margin-top:0px;
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;                
+            }
+            .title_style{
+                color:darkblue;
+                padding-top:10px;
+            }
+            
+            #pic_boss{
+                float:left;
+                margin-right: 10px;
+                margin-top: 10px;
+                -webkit-transition-propert:width;
+                -webkit-transition-duration: .3s;
+            }
+            
+            .small{
+                width:60%;
+            }
+            
+            .large{
+                width:100%;
+            }
+            
+            
+        
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // flag값을 false로 설정
+                $("#pic_boss").data("flag", "false");
+                
+                
+                //이미지를 클릭하면....
+                $("#pic_boss").click(function(){
+                    var bflag=$("#pic_boss").data("flag");
+                    if(bflag=="false"){
+                        bflag="true";
+                        $("#pic_boss").removeClass("small");
+                        $("#pic_boss").addClass("large"); 
+                    }else{
+                        bflag="false";
+                        $("#pic_boss").removeClass("large");
+                        $("#pic_boss").addClass("small"); 
+                    }                    
+                    $("#pic_boss").data("flag", bflag);
+                });            
+            
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <a href="index.html" data-icon="back">Back</a>
+                <a href="index.html" data-icon="home" data-iconpos="notext">홈</a>
+                <h1>영화소개</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="movie2.html" class="ui-btn-active">
+                                개요
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="movie2_1.html">
+                                등장인물
+                            </a>
+                        </li>
+                        <li>
+                            <a href="movie2_2.html">
+                                줄거리
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content" font-color="blue">
+               <p>
+                <img class="small" id="pic_boss" src="movie_image.jpg" alt="안녕" >
+                </p>
+               
+                <h4 style="color:blue;">액션,SF | 미국,영국 | 117분 | 2015.09.03 개봉</h4>
+                <b>네티즌 평점</b> ★★★★☆ 8.62   </p>
+                <b>감독</b> 페이틀 리드             </p>
+                <b>출연</b> 폴 러드, 마이클 더클라스 </p>
+                <b>등급</b> [국내]12세 관람가       </p>
+                <b>흥행</b> 누적관객 2,828,916명
+            </div>
+            <div data-role="footer">
+                Copyright&copy; MARVEL
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+[실행법]
+
+<flask설치>
+> pip install flask
+
+<실행>
+> python granger.py
+or 
+> python3 granger.py
+
+이미지 - static/images

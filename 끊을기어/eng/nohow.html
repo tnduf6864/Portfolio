@@ -1,0 +1,265 @@
+<!DOCTYPE html by CGS>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stop Smoke!</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+        <script src="jquery.mobile-1.4.5/demos/js/jquery.js"></script>
+        <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <link href="fotorama.css" rel="stylesheet">
+        <script src="fotorama.js"></script>
+        
+        <script type="application/javascript">
+            function ref()
+            {
+                location.reload(true);   
+            }
+            
+            function insert()
+            {
+                location.href="http://cgs7534.cafe24.com/insert2.jsp";   
+            }
+            
+            function del()
+            {
+                location.href="http://cgs7534.cafe24.com/delete.jsp";   
+            }
+        </script>
+        
+        <style type="text/css">
+            #logo
+            {
+                width:200px;
+                height:111px;
+                text-indent:-99999px;
+                background-image: url(img/s_eng_logo.png);
+                background-repeat: no-repeat;
+                margin-top: 0px; /* 상단 여백 없이 */
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;
+            }
+            
+            .white
+            {
+                background-color: white;   
+            }
+            
+            .box_style
+            {
+                float:left;
+                width:220px;
+                margin:0.5em;
+                padding: 1em;
+            }
+            
+            .float_style
+            {
+                float: left;
+            }
+            
+            .clear_style
+            {
+                clear: left;
+            }
+            
+            .green
+            {
+                background-color: #2FED28;
+            }
+            
+            .orange
+            {
+                background-color: #FF8224;
+            }
+            
+            .red
+            {
+                background-color: #FF0000;
+            }
+            
+            #size
+            {
+                height: 50px;   
+            }
+            
+            #container #foot
+            {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+            }
+            
+            #container
+            {
+                padding-bottom: 50px;
+                min-height: 100%; 
+                position: relative;
+            }
+            
+            .title_style
+            {
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div data-role="page" data-theme="b" id="container">
+            
+            <a href="../main.html" rel="external">
+                <div data-role="header" data-theme="b" style="width:100%; height:111px">
+                    <h1 id="logo">Breaking-Smoke</h1>
+                </div>
+            </a>  
+            <p></p>
+            
+            <div data-role="content" data-theme="b">
+                <div width="100%" height="400">
+                    <!-- 디폴트 insert 버튼 -->
+                    <center>
+                        <iframe src="http://cgs7534.cafe24.com/serry2/default.html" id="ifid" frameborder="0" frame eborder="yes" width="50%" height="200" name="ifr" scrolling="no" allowtransparency="false"></iframe>
+                    </center><br/>
+                    <!--<input type="button" onclick="insert()" value="흡연+1" data-icon="alert" data-inline="true">-->
+                    <table>
+                        <tr>
+                            <td><input type="button" onclick="ref()" value="Synchro" data-icon="refresh" data-inline="true"></td>
+                            <td><iframe src="http://cgs7534.cafe24.com/eng/delete.html" frameborder="0" frame eborder="yes" width="100%" height="90" name="ifr" scrolling="no" allowtransparency="false"></iframe></td>
+                        </tr>
+                    </table>
+                    <iframe src="http://cgs7534.cafe24.com/eng/info.jsp" frameborder="0" frame eborder="yes" width="100%" height="330" name="ifr" scrolling="no" allowtransparency="false"></iframe>
+                <!--<div>
+                    <div class="box_style">
+                        <label>흡연량 13/20</label>
+                        <progress value="13" max="20"></progress>
+                    </div>
+                    <div class="box_style">
+                        <label>오늘의 흡연비용</label>
+                        <input type="text" value="2925원" readonly>
+                    </div>
+                </div>-->
+                </div>
+                <div data-role="collapsible-set" data-theme="b" class="clear_style">
+                    <div data-role="collapsible" data-theme="b" data-collapsed-icon="heart" data-expanded-icon="heart">
+                        <h1>Status</h1>
+                        <p align="center">
+                            <!--<iframe src="status.html" frameborder="0" frame eborder="yes" width="300" height="300" name="iframe" scrolling="no" allowtransparency="false"></iframe>-->
+                            <iframe src="http://cgs7534.cafe24.com/status.jsp" frameborder="0" frame eborder="yes" width="300" height="300" name="iframe" scrolling="no" allowtransparency="false"></iframe>
+                        </p>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <th>Smoking amount</th>
+                                    <th>Color</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0~7</td>
+                                        <td><canvas id="myCanvas" width="13" height="13" style="border:1px; background-color:#2FED28; solid #2FED28;"></canvas></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8~14</td>
+                                        <td><canvas id="myCanvas" width="13" height="13" style="border:1px; background-color:#FF8224; solid #2FED28;"></canvas></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15~~</td>
+                                        <td><canvas id="myCanvas" width="13" height="13" style="border:1px; background-color:#FF0000; solid #2FED28;"></canvas></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--<p>0~7&nbsp;&nbsp;&nbsp;<canvas id="myCanvas" width="13" height="13" style="border:1px; background-color:#2FED28; solid #2FED28;"></canvas>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            8~14&nbsp;&nbsp;&nbsp;<canvas id="myCanvas" width="13" height="13" style="border:1px; background-color:#FF8224; solid #FF8224;"></canvas>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            15~~&nbsp;&nbsp;&nbsp;<canvas id="myCanvas" width="13" height="13" style="border:1px; background-color:#FF0000; solid #FF0000;"></canvas></p>-->
+                        </div>
+                    </div>
+                    <div data-role="collapsible" style="text-align=center;" class="white" data-collapsed-icon="bullets" data-expanded-icon="bullets" data-theme="b">
+                    <!--<div data-role="collapsible">-->
+                        <h3>Graph</h3>
+                        <center>
+                            <iframe src="http://cgs7534.cafe24.com/eng/graph.jsp" class="white" frame eborder="yes" width="100%" height="40%" name="iframe" scrolling="no" allowtransparency="false"></iframe>
+                        </center>
+                    </div>
+                    
+                    <div data-role="collapsible" data-collapsed-icon="camera" data-theme="b">
+                        <h1>Non-Smoking Poster</h1>
+                        <div class="fotorama" data-nav="thumbs" data-theme="b">
+                            <img src="img/stop1.jpg" data-caption="<1/10>">
+                            <img src="img/stop2.jpg" data-caption="<2/10>">
+                            <img src="img/stop3.jpg" data-caption="<3/10>">
+                            <img src="img/stop4.jpg" data-caption="<4/10>">
+                            <img src="img/stop5.jpg" data-caption="<5/10>">
+                            <img src="img/stop6.jpg" data-caption="<6/10>">
+                            <img src="img/stop7.jpg" data-caption="<7/10>">
+                            <img src="img/stop8.jpg" data-caption="<8/10>">
+                            <img src="img/stop9.jpg" data-caption="<9/10>">
+                            <img src="img/stop10.jpg" data-caption="<10/10>">
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-collapsed="false" data-theme="b" data-collapsed-icon="info" data-expanded-icon="info">
+                        <h1>Non-Smoking Tip</h1>
+                        <div data-role="navbar" width="100%">
+                            <ul>
+                                <li>
+                                    <a href="effect.html" rel="external">
+                                        Effect
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="progress.html" rel="external">
+                                        Physical changes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="nohow.html" class="ui-btn-active" rel="external">
+                                        Knowhow
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <blockquote>
+                            <p>Non-smoking do pricing in the short term, the plan for an extended period of time.</p>
+                            <footer>Getting it right is not set until the day to break way.</footer>
+                        </blockquote>
+                        <br/>
+                        <blockquote>
+                            <p>When you quit smoking supplements so hard to use.</p>
+                            <footer>So it's hard to please rather than smoking electronic cigarette, when chewing gum, etc. and it is also true.</footer>
+                        </blockquote>
+                        <br/>
+                        <blockquote>
+                            <p>The non-smoking show that to the people around you.</p>
+                            <footer>Non-smoking advertising that occurs in the vicinity of several responsibility can help.</footer>
+                        </blockquote>
+                        <br/>
+                        <blockquote>
+                            <p>Concentrate on anything else.</p>
+                            <footer>Focused on sports or hobbies, you can eliminate the tobacco means thought.</footer>
+                        </blockquote>
+                        <br/>
+                        <blockquote>
+                            <p>Drink plenty of water.</p>
+                            <footer>A sense of cool drinking water mouth different smoking needs.</footer>
+                        </blockquote>
+                        <br/>
+                        <blockquote>
+                            <p>For the time being, try to avoid stimulating food and instant food.</p>
+                            <footer>In particular, alcohol or coffee so far.</footer>
+                        </blockquote>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div data-role="footer" id="foot">
+                <center><p>Copyright&copy;2015 By 개발의민족 ALLRIGHT DESERVED.</p></center>
+            </div>
+            
+        </div>
+    </body>
+</html>
