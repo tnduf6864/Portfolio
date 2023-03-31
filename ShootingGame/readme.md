@@ -21,4 +21,8 @@
 
 
 # 이미지
+<image src="메인화면 및 게임오버.png">
+<image src="랭킹 및 게임방법.png">
+<image src="캐릭터 선택.png">
 <image src="게임플레이 - 보스.png">
+<image src="게임플레이 - 보스2.png">
