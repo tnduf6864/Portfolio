@@ -26,3 +26,4 @@
 <image src="캐릭터 선택.png">
 <image src="게임플레이 - 보스.png">
 <image src="게임플레이 - 보스2.png">
+<image src="전체 플레이 영상.mp4">
