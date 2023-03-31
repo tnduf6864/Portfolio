@@ -28,4 +28,4 @@
 <img src="img/readme/6.png">
 <img src="img/readme/7.png">
 <img src="img/readme/8.png">
-<img src="img/readme/9.png">
+<img src="img/readme/9.jpg">
